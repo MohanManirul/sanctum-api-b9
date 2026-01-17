@@ -40,7 +40,7 @@ class BookingController extends Controller
             DB::beginTransaction();
 
             // Get authenticated tenant
-            $tenantId = auth('api')->id();
+            $tenantId = auth('sanctum')->id();
             if (!$tenantId) {
                 return response()->json(['message' => 'Unauthorized'], 401);
             }

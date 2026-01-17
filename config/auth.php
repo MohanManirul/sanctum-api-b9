@@ -40,10 +40,7 @@ return [
             'driver' => 'session',
             'provider' => 'users',
         ],
-        'api' => [
-            'driver' => 'sanctum',
-            'provider' => 'tenants', // এখানে তোমার Tenant provider
-        ],
+        
     ],
 
     /*
@@ -68,10 +65,7 @@ return [
             'driver' => 'eloquent',
             'model' => env('AUTH_MODEL', App\Models\User::class),
         ],
-         'tenants' => [
-            'driver' => 'eloquent',
-            'model' => App\Models\Tenant::class,
-        ],
+         
 
         // 'users' => [
         //     'driver' => 'database',
