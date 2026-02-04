@@ -17,8 +17,8 @@ class Tenant extends Authenticatable
         return $this->hasMany(Booking::class);
     }
 
-    // public function apartments()
-    // {
-    //     return $this->belongsToMany(Apartment::class, 'bookings', 'tenant_id', 'apartment_id');
-    // }
+    public function apartments()
+    {
+        return $this->belongsToMany(Apartment::class, 'bookings', 'tenant_id', 'apartment_id');
+    }
 }
