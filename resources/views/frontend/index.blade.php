@@ -177,7 +177,7 @@ async function handleBooking(button, apartmentId) {
             alert('Please select booking date range.');
             return;
         }
-
+ 
         try {
             const res = await axios.post(
                 '/api/v1/bookings',
@@ -192,7 +192,8 @@ async function handleBooking(button, apartmentId) {
                     }
                 }
             );
-
+                console.log(res);
+                
             alert('Apartment booked successfully!');
             button.disabled = true;
             button.innerHTML = 'Booked';

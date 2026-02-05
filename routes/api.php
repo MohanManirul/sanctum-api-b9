@@ -27,7 +27,7 @@ Route::prefix('v1')->group(function () {
     Route::middleware('auth:sanctum')->group(function(){
 
         Route::post('logout',[TenantController::class,'logout']) ;
-        Route::post('bookings', [BookingController::class, 'index']);
+        Route::post('bookings', [BookingController::class, 'store']);
        Route::get('/bookings',[TenantController::class,'bookings'])->name('bookings') ;
        Route::get('/notifications',[DashboardController::class,'dashboardNotifications'])->name('dashboardNotifications') ;
     });

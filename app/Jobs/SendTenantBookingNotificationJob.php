@@ -3,6 +3,7 @@
 namespace App\Jobs;
 
 use App\Models\Booking;
+use App\Notifications\BookingCreatedNotification;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Foundation\Queue\Queueable;
 
@@ -16,7 +17,8 @@ class SendTenantBookingNotificationJob implements ShouldQueue
      */
     public function __construct(Booking $booking, $tenant)
     {
-        //
+        $this->booking = $booking;
+        $this->tenant  = $tenant;
     }
 
     /**
