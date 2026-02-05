@@ -15,6 +15,8 @@ https://chatgpt.com/c/698337e1-7820-83aa-8676-8276a5a24dc4
  --- php artisan make:job SendTenantBookingNotificationJob --queued
  --- php artisan make:notification BookingCreatedNotification --queued
 
+cron job
+--------
 
 
 
